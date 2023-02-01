@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="./imgs/fav/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="./imgs/fav/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="./imgs/fav/favicon-16x16.png">
+	<link rel="manifest" href="./imgs/fav/site.webmanifest">
+	<link rel="mask-icon" href="./imgs/fav/safari-pinned-tab.svg" color="#5bbad5">
+	<link rel="shortcut icon" href="./imgs/fav/favicon.ico">
+	<meta name="msapplication-TileColor" content="#da532c">
+	<meta name="msapplication-config" content="./imgs/fav/browserconfig.xml">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="author" content="Kaveman-x">
+	<!-- title page & SEO meta -->
+	<title>KAI - home</title>
+	<meta name="description" content="ai powered VC fund, ai measured risk, ai analysis, fair kickstart">
+	<meta name="keywords" content="money, funding, VC fund, assets, risk, ai, artificial intelligence, website, html, html5, css">
+	<!-- google fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+	<!-- css -->
+	<link rel="stylesheet" href="./css/fontawesome.min.css" />
+	<link rel="stylesheet" href="./css/aos.css" />
+	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./css/custom.css">
+	<link rel="stylesheet" href="./css/_menu.css">
+	<!-- solar system -->
+	<link rel="stylesheet" href="./css/_solar.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	if (typeof jQuery == 'undefined') { 
+	  document.write(unescape("%3Cscript src='js/jquery.min.js' type='text/javascript'%3E%3C/script%3E"));
+	}
+	</script>
+	<script>
+		$(window).load(function(){
+
+			var body = $("#solarSection"),universe = $("#universe"),solarsys = $("#solar-system");
+
+			var init = function() {
+				body.removeClass('view-2D opening').addClass("view-3D").delay(2000).queue(function() {
+					$(this).removeClass('hide-UI').addClass("set-speed");
+					$(this).dequeue();
+				});
+			};
+
+			var setView = function(view) { universe.removeClass().addClass(view); };
+
+			$("#toggle-data").click(function(e) {
+				body.toggleClass("data-open data-close");
+				e.preventDefault();
+			});
+
+			$("#toggle-controls").click(function(e) {
+				body.toggleClass("controls-open controls-close");
+				e.preventDefault();
+			});
+
+			$("#data a").click(function(e) {
+				var ref = $(this).attr("class");
+				solarsys.removeClass().addClass(ref);
+				$(this).parent().find('a').removeClass('active');
+				$(this).addClass('active');
+				e.preventDefault();
+			});
+
+			$(".set-view").click(function() { body.toggleClass("view-3D view-2D"); });
+			$(".set-zoom").click(function() { body.toggleClass("zoom-large zoom-close"); });
+			$(".set-speed").click(function() { setView("scale-stretched set-speed"); });
+			$(".set-size").click(function() { setView("scale-s set-size"); });
+			$(".set-distance").click(function() { setView("scale-d set-distance"); });
+
+			init();
+
+});
+	</script>
+	<script>
+		//TYPEWRITER
+		document.addEventListener('DOMContentLoaded',function(event){
+			// array with texts to type in typewriter
+			var dataText = ["Overall Rating: 6/10 ⚠️</br>Results: Moonshot","Group:4/10❕</br>Deployer:3/10❗️</br>Twitter:6/10 ✅</br>Hype:8/10 ✅</br>Code:8/10 ✅</br>Overall: 5/10 ⚠️",];
+			// type one text in the typwriter
+			// keeps calling itself until the text is finished
+			function typeWriter(text, i, fnCallback) {
+				// chekc if text isn't finished yet
+				if (i < (text.length)) {
+					// add next character to h1
+					document.querySelector(".aiverdict").innerHTML = text.substring(0, i+1) +'<span id="typewrite" aria-hidden="true"></span>';
+					// wait for a while and call this function again for next character
+					setTimeout(function() {
+						typeWriter(text, i + 1, fnCallback)
+					}, 150);
+				}
+				// text finished, call callback if there is a callback function
+				else if (typeof fnCallback == 'function') {
+				// call callback after timeout
+				setTimeout(fnCallback, 5000);
+				}
+			}
+			// start a typewriter animation for a text in the dataText array
+			function StartTextAnimation(i) {
+				if (typeof dataText[i] == 'undefined'){
+					setTimeout(function() {
+						StartTextAnimation(0);
+					}, 20000);
+				}else{
+					// check if dataText[i] exists
+					if (i < dataText[i].length) {
+						// text exists! start typewriter animation
+						typeWriter(dataText[i], 0, function(){
+						// after callback (and whole text has been animated), start next text
+						StartTextAnimation(i + 1);
+						});
+					}
+				}
+			}
+			// start the text animation
+			StartTextAnimation(0);
+		});
+	</script>
+	<script src="js/prefixfree.min.js"></script>
+	<script src="js/scripts.min.js"></script>
+</head>
+
+<body>
+	<!-- Accessibility: Skip to content -->
+	<a href="#main" class="skip-to-content">to the main</a>
+	<!-- Preload page -->
+	<div id="preload">kickstart ai loading...</div>
+
+	<header>
+		<div class="container grid" data-aos="fade-up">
+			<!-- your logo here -->
+			<a href="./">
+				<img src="./imgs/logo.webp" alt="logo">
+			</a>
+
+			<!-- mobile navbar toggle button -->
+			<button class="mobile-nav-toggle" aria-controls="navbar">
+				<span class="sr-only" aria-expanded="false">Menu</span>
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</button>
+			
+			<!-- navbar with page links -->
+			<nav id="navbar" data-visible="false">
+				<ul>
+					<li><a href="#woofers-token">KAI</a></li>
+					<li><a href="#buttons">Guide</a></li>
+					<li><a href="#roadmap">Roadmap</a></li>
+					<li><a href="#team">Team</a></li>
+					<li><a href="#mint">Tokenomics</a></li>
+				</ul>
+				<!-- navbar buttons -->
+				<div class="account">
+					<a href="floor.html"  class="btn-cta">Dapp</a>
+				</div>
+			</nav>
+		</div>
+	</header>
+
+	
+	<main id="main">
+		
+		<!-- slider section -->
+		<section id="slider">
+			<div class="container grid">
+				<!-- space vortex -->
+				<div class="space-vortex" data-aos="zoom-out-down" data-aos-delay="400">
+					<!-- call to action image -->
+					<img src="./imgs/maskot2.webp" class="mx-w-25 pulse" alt="maskot-sheikh-inu">
+				</div>
+				<!-- call to action text -->
+				<div>
+					<h1 data-aos="zoom-out-down">Kickstart AI</h1>
+					<p data-aos="zoom-out-down" data-aos-delay="100">AI powered VC Fund, community owned, kickstarting projects and lending to wallets with the metrics to succeed.</p>
+					
+					<!-- call to action buttons -->
+					<div id="buttons" class="buttonsHold flex" data-aos="zoom-out-up" data-aos-delay="300">
+						<a href="" target="_self" class="btn btn-cta">BUY $KAI</a>
+						<a href="https://www.dextools.io/app/en/ether/pair-explorer/" class="btn btn-border">DexTools</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="solarSection" class="opening hide-UI view-2D zoom-large data-close controls-close">
+			<div id="solarnavbar">
+			  <a id="toggle-data" href="#data"><i class="icon-data"></i>Data</a>
+			  <h1>We calculate each moon mission with precision</br></br>This is an AI lending platform. It's easier now with AI to collect key metrics and then compile highly accurate credit profiles and predict future financial perfomance, for both projects and individuals that are applying for loans.</h1>
+			  <a href="./resources/kickstartai.pdf" target="_blank" class="guidetothegalaxy">Guide to the Galaxy</a>
+			  <a id="toggle-controls" href="#controls"><i class="icon-controls"></i>Controls</a>
+			</div>
+			<div id="data">
+			  <a class="sun" title="sun" href="#sunspeed">Sun</a>
+			  <a class="mercury" title="mercury" href="#mercuryspeed">Mercury</a>
+			  <a class="venus" title="venus" href="#venusspeed">Venus</a>
+			  <a class="earth active" title="earth" href="#earthspeed">Earth</a>
+			  <a class="mars" title="mars" href="#marsspeed">Mars</a>
+			  <a class="jupiter" title="jupiter" href="#jupiterspeed">Jupiter</a>
+			  <a class="saturn" title="saturn" href="#saturnspeed">Saturn</a>
+			  <a class="uranus" title="uranus" href="#uranusspeed">Uranus</a>
+			  <a class="neptune" title="neptune" href="#neptunespeed">Neptune</a>
+			  <a class="shitcoin" title="your shitcoin" href="#shitcoinspeed">Shitcoin</a>
+			</div>
+			<div id="controls">
+			  <label class="set-view">
+				<input type="checkbox">
+			  </label>
+			  <label class="set-zoom">
+				<input type="checkbox">
+			  </label>
+			  <label>
+				<input type="radio" class="set-speed" name="scale" checked>
+				<span>Speed</span>
+			  </label>
+			  <label>
+				<input type="radio" class="set-size" name="scale">
+				<span>Size</span>
+			  </label>
+			  <label>
+				<input type="radio" class="set-distance" name="scale">
+				<span>Distance</span>
+			  </label>
+			</div>
+			<div id="universe" class="scale-stretched">
+			  <div id="galaxy">
+				<div id="solar-system" class="earth">
+				  <div id="mercury" class="orbit">
+					<div class="pos">
+					  <div class="planet">
+						<dl class="infos">
+						  <dt>Mercury</dt>
+						  <dd><span></span></dd>
+						</dl>
+					  </div>
+					</div>
+				  </div>
+				  <div id="venus" class="orbit">
+					<div class="pos">
+					  <div class="planet">
+						<dl class="infos">
+						  <dt>Venus</dt>
+						  <dd><span></span></dd>
+						</dl>
+					  </div>
+					</div>
+				  </div>
+				  <div id="earth" class="orbit">
+					<div class="pos">
+					  <div class="orbit">
+						<div class="pos">
+						  <div class="moon"></div>
+						</div>
+					  </div>
+					  <div class="planet">
+						<dl class="infos">
+						  <dt>Earth</dt>
+						  <dd><span></span></dd>
+						</dl>
+					  </div>
+					</div>
+				  </div>
+				  <div id="mars" class="orbit">
+					<div class="pos">
+					  <div class="planet">
+						<dl class="infos">
+						  <dt>Mars</dt>
+						  <dd><span></span></dd>
+						</dl>
+					  </div>
+					</div>
+				  </div>
+				  <div id="jupiter" class="orbit">
+					<div class="pos">
+					  <div class="planet">
+						<dl class="infos">
+						  <dt>Jupiter</dt>
+						  <dd><span></span></dd>
+						</dl>
+					  </div>
+					</div>
+				  </div>
+				  <div id="saturn" class="orbit">
+					<div class="pos">
+					  <div class="planet">
+						<div class="ring"></div>
+						<dl class="infos">
+						  <dt>Saturn</dt>
+						  <dd><span></span></dd>
+						</dl>
+					  </div>
+					</div>
+				  </div>
+				  <div id="uranus" class="orbit">
+					<div class="pos">
+					  <div class="planet">
+						<dl class="infos">
+						  <dt>Uranus</dt>
+						  <dd><span></span></dd>
+						</dl>
+					  </div>
+					</div>
+				  </div>
+				  <div id="shitcoin" class="orbit">
+					<div class="pos">
+					  <div class="planet">
+						<dl class="infos">
+						  <dt>Shitcoin</dt>
+						  <dd><span></span></dd>
+						</dl>
+					  </div>
+					</div>
+				  </div>
+				  <div id="neptune" class="orbit">
+					<div class="pos">
+					  <div class="planet">
+						<dl class="infos">
+						  <dt>Neptune</dt>
+						  <dd><span></span></dd>
+						</dl>
+					  </div>
+					</div>
+				  </div>
+				  <div id="sun">
+					<dl class="infos">
+					  <dt>Sun</dt>
+					  <dd><span></span></dd>
+					</dl>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		</section>
+
+		<section class="aiAnalyHold">
+			<h1>Imagine this</br></br>Before granting a project loan, lets do a deployer check, hype check, TG size check, brand check, caller check, volume check and tax profile check. These are some of the metrics that can be fed into assessment models for: viability, risk, revenues, and profitability. To then determine the feasibility of a loan application.</h1>
+			
+			<div class="projectCard raisemark_ill_inprogress">
+				<div class="kickoff">approved: 0/0/0000, 00:00:00 </div>
+				<div class="projectGrid">
+					<div class="projectLogoLeft"  style="background-image:url('imgs/monkeytrain.png')"></div>
+					<div class="projectName">Project X</div>
+					<div class="projectRaiseTarget">1.2 ETH</div>
+				</div>
+				<div class="mbcard_detail rb_detail">
+					<div class="parent_meter">
+						<div id="meter_guage" style="width:15%;"></div>
+						<span class="measure">15%</span>
+					</div>
+				</div>
+				<div class="raiseSummary raisemark_ill_inprogress">
+					<div class="raise_S_tab _bullbear">
+						<span class="status-dot inprogress"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><circle cx="8" cy="8" r="8"></circle></svg><span style="white-space: nowrap;">Funding Live</span></span>
+					</div>
+					<div class="raise_S_tab _socials">
+						<a class="social_links" href="#" target="_blank" alt="TWT" title="Go to Twitter page"><img src="imgs/twitter.svg" width="32px"/></a>
+						<a class="social_links" href="#" target="_blank" alt="TG" title="Go to Telegram group"><img src="imgs/telegram.svg" width="32px"/></a>
+						<a class="social_links" href="#" target="_blank" alt="SC" title="Go to Etherscan"><img src="imgs/etherscan.svg" width="32px"/></a>
+					</div>
+					<div class="raise_S_tab _bookmarkjump">
+						<a class="view_project" href="#" target="_blank" alt="View" title="Open project">view</a>
+						<div class='raise_S_tab _bookmarkjump'><img src='imgs/bookmark_.png' width='18px'/></div>
+					</div>
+				</div>
+			</div>
+			<div class="aiAnalysis">
+				<div class="aicontainer">
+					<div class="aishape">
+						<div class="aiHead"></div>
+						  <div class="intro_cont"><div class="aiverdict"></div></div>
+					</div>
+				</div>
+			</div>
+			<h1>our AI will also determine: the amount of funding an applicant receives, type of funding, and funding collateral.</h1>
+		</section>
+
+		<!-- roadmap section -->
+		<section id="roadmap" style="background-image:url('imgs/playful.webp'); background-size: cover;">
+			<div class="Container_container__WAGEk">
+				</br>
+				<div class="extranotes">Timeline</div>
+				<div class="Roadmap_roadmapGrid__cKmwx">
+					<div class="Roadmap_roadmapItem__LU10a Roadmap_itemOne__Q3yOw glow1">
+						<h3>: Boom</h3>
+						<p>Community Building, Website kickstart, Token kickstart, DexTools Update, 200+ Holders, 200 Telegram Members</p>
+					</div>
+					<div class="Roadmap_roadmapItem__LU10a Roadmap_itemTwo__2bPYf glow3">
+						<h3>: Zenith</h3>
+						<p>Whitepaper V1, Community Education, Dashboard Reveal, Beta kickstart (4 days after kickstart)</p>
+					</div>
+					<div class="Roadmap_roadmapItem__LU10a Roadmap_itemThree__ZZs5e glow1">
+						<h3>: Deep Space</h3>
+						<p>Whitepaper V2,Beta Feedback processing, Iterate Platform, Test AI intergration, Partnerships</p>
+					</div>
+					<div class="Roadmap_roadmapItem__LU10a Roadmap_itemFour__4VmPh glow1">
+						<h3>: Aurora</h3>
+						<p>Mainnet kickstart, New Partnerships, Improve Marketing Plan to Fit Trends, Team expansion, Add New Features</p>
+					</div>
+					<div class="Roadmap_roadmapItem__LU10a Roadmap_itemFive__FmZiS glow3">
+						<h3>: Stargate</h3>
+						<p>Go multi chain, CEX Listing, Expand utility to bridge to all types of kickstartes</p>
+					</div>
+					<div class="Roadmap_roadmapItem__LU10a Roadmap_itemFive__3Pcy2F glow2">
+						<h3>: Noctilucent</h3>
+						<p>Version 2 Protocol and Website kickstart, V3 Whitepaper</p>
+					</div>
+				</div>
+				</br></br>
+				</br></br>
+			</div>
+		</section>
+
+		<!-- mint section -->
+		<section id="mint">
+			<div class="container grid">
+				<!-- left image -->
+				<img src="./imgs/aibottemp2.webp" class="out-container move" alt="Energy - Image" data-aos="zoom-out-rigth">
+				<!-- mint info -->
+				<div>
+					<h1 class="txt-gradient" data-aos="fade-down">kickstart Details</h1>
+					<h2 data-aos="fade-down" data-aos-delay="100">1 Billion Tokens<br>Eth Blockchain</h2>
+					<p class="mb-4" data-aos="fade-down" data-aos-delay="200">Fair kickstart: all added to LP.</p>
+					<p class="mb-4" data-aos="fade-down" data-aos-delay="200">Max Holdings: 2% of Supply</p>
+					
+					<h2 data-aos="fade-up" data-aos-delay="300">Taxes:</h2>
+					<h1 class="txt-gradient" data-aos="zoom-in" data-aos-delay="350">5/5</h1>
+					
+					<h2 data-aos="fade-up" data-aos-delay="400">Tax Use:</h2>
+					<h1 class="txt-gradient" data-aos="zoom-in" data-aos-delay="450">50% business dev</h1></br>
+					<h1 class="txt-gradient" data-aos="zoom-in" data-aos-delay="450">50% marketing</h1></br>
+					
+					<h2 data-aos="fade-up" data-aos-delay="500">Initial MC:</h2>
+					<h1 class="txt-gradient" data-aos="zoom-in" data-aos-delay="550">TBA - ETH</h1>
+				</div>
+			</div>
+		</section>
+
+	</main>
+
+
+	<!-- footer -->
+	<footer>
+		<div class="container grid" data-aos="fade-up">
+			<div>
+				<!-- your logo here -->
+				<a href="/">	
+					<img src="./imgs/logo.webp" alt="logo">
+				</a>
+				<p class="mb-2">AI powered VC fund, ai measured loans.</p>
+
+				<!-- social links -->
+				<ul class="inline-list">
+					<li>
+						<a href="https://twitter.com/kickstartai" target="_self">
+							<i class="fa-brands fa-twitter"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://t.me/kickstartai" target="_self">
+							<i class="fa-solid fa-paper-plane"></i>
+						</a>
+					</li>
+				</ul>
+			</div>
+
+			<!-- links -->
+			<div>
+				<h3>Links</h3>
+				<ul>
+					<li><a href="#">Whitepaper</a></li>
+					<li><a href="#">DexTools</a></li>
+					<li><a href="#">Uniswap</a></li>
+				</ul>
+			</div>
+
+			<!-- links -->
+			<div>
+				<h3>Socials</h3>
+				<ul>
+					<li><a href="https://twitter.com/kickstartai">Twitter</a></li>
+					<li><a href="https://t.me/kickstartai">Telegram</a></li>
+					<li><a href="mailto:info@kickstartai.com">Mail</a></li>
+				</ul>
+			</div>
+
+			<!-- copyrights -->
+			<p>&copy; kickstart AI <span id="#thisYear"></span>. All Rights Reserved. 2023.</p>
+		</div>
+	</footer>
+
+
+	<!-- login modal -->
+	<div id="loginModal">
+		<div class="modal">
+			<!-- close modal icon -->
+			<span class="close-modal">x</span>
+			<!-- your logo here -->
+			<img src="./imgs/logo.webp" alt="logo">
+			
+			<h2>Login with your account</h2>
+			<!-- login form -->
+			<form id="loginForm" action="javascript:void(0)">
+				<input type="email" name="emailLogin" id="emailLogin" placeholder="Your Email" required>
+				<input type="password" name="passwordLogin" id="passwordLogin" placeholder="Your Password" required>
+				<button type="submit" class="btn-cta">Login</button>
+			</form>
+			
+			<p>or continue</p>
+			<!-- login with Google account -->
+			<button class="btn-border">
+				with <strong>Google</strong>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg>
+			</button>
+			<!-- login with Facebook account -->
+			<button class="btn-border">
+				with <strong>Facebook</strong>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+			</button>
+			
+			<!-- link to registration modal -->
+			<small>Don't have an account? <a href="javascript:void(0)" id="changeSignUp">Sign up</a></small>
+		</div>
+	</div>
+
+
+	<!-- registration modal -->
+	<div id="signUpModal">
+		<div class="modal">
+			<!-- close modal icon -->
+			<span class="close-modal">x</span>
+			<!-- your logo here -->
+			<img src="./imgs/logo.webp" alt="logo">
+			
+			<h2>Sign Up now!</h2>
+			<!-- registration form -->
+			<form id="signUpForm" action="javascript:void(0)">
+				<input type="text" name="usernameSignUp" id="usernameSignUp" placeholder="Your Username" required>
+				<input type="email" name="emailSignUp" id="emailSignUp" placeholder="Your Email" required>
+				<input type="password" name="passwordSignUp" id="passwordSignUp" placeholder="Your Password" required>
+				<button type="submit" class="btn-cta">Sign Up</button>
+			</form>
+
+			<p>or Sign Up</p>
+			<!-- registration with Google account -->
+			<button class="btn-border">
+				with <strong>Google</strong>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 488 512"><path d="M488 261.8C488 403.3 391.1 504 248 504 110.8 504 0 393.2 0 256S110.8 8 248 8c66.8 0 123 24.5 166.3 64.9l-67.5 64.9C258.5 52.6 94.3 116.6 94.3 256c0 86.5 69.1 156.6 153.7 156.6 98.2 0 135-70.4 140.8-106.9H248v-85.3h236.1c2.3 12.7 3.9 24.9 3.9 41.4z"/></svg>
+			</button>
+			<!-- registration with Facebook account -->
+			<button class="btn-border">
+				with <strong>Facebook</strong>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 310 512"><path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"/></svg>
+			</button>
+			
+			<!-- link to login modal -->
+			<small>Already have an account? <a href="javascript:void(0)" id="changeLogin">Login</a></small>
+		</div>
+	</div>
+
+
+	<!-- connect wallet modal -->
+	<div id="walletModal">
+		<div class="modal">
+			<!-- close modal icon -->
+			<span class="close-modal">x</span>
+
+			<h2>Available Wallets</h2>
+			<!-- wallets button -->
+			<button class="btn-border">
+				<svg width="38" height="33" viewBox="0 0 38 33" xmlns="http://www.w3.org/2000/svg"><path d="M32.9583 1L19.8242 10.7183L22.2666 4.99099L32.9583 1Z" fill="#E17726" stroke="#E17726" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M2.66284 1L15.68 10.809L13.3546 4.99098L2.66284 1Z" fill="#E27625" stroke="#E27625" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M28.2292 23.5334L24.7346 28.872L32.2175 30.9323L34.3611 23.6501L28.2292 23.5334Z" fill="#E27625" stroke="#E27625" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M1.27271 23.6501L3.40325 30.9323L10.8732 28.872L7.39154 23.5334L1.27271 23.6501Z" fill="#E27625" stroke="#E27625" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.4704 14.5149L8.39185 17.6507L15.7968 17.9876L15.55 10.0186L10.4704 14.5149Z" fill="#E27625" stroke="#E27625" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M25.1503 14.515L19.9929 9.92798L19.824 17.9877L27.2289 17.6508L25.1503 14.515Z" fill="#E27625" stroke="#E27625" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.8733 28.872L15.3552 26.7081L11.4969 23.7019L10.8733 28.872Z" fill="#E27625" stroke="#E27625" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.2659 26.7081L24.7348 28.872L24.1242 23.7019L20.2659 26.7081Z" fill="#E27625" stroke="#E27625" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M24.7348 28.8722L20.2659 26.7083L20.6296 29.6108L20.5906 30.8418L24.7348 28.8722Z" fill="#D5BFB2" stroke="#D5BFB2" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.8733 28.8722L15.0305 30.8418L15.0045 29.6108L15.3552 26.7083L10.8733 28.8722Z" fill="#D5BFB2" stroke="#D5BFB2" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.1083 21.7842L11.3928 20.6958L14.017 19.4907L15.1083 21.7842Z" fill="#233447" stroke="#233447" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.5127 21.7842L21.604 19.4907L24.2412 20.6958L20.5127 21.7842Z" fill="#233447" stroke="#233447" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.8732 28.872L11.5228 23.5334L7.3916 23.6501L10.8732 28.872Z" fill="#CC6228" stroke="#CC6228" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M24.0981 23.5334L24.7347 28.872L28.2293 23.6501L24.0981 23.5334Z" fill="#CC6228" stroke="#CC6228" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M27.2289 17.6506L19.824 17.9875L20.5125 21.7842L21.6038 19.4906L24.241 20.6957L27.2289 17.6506Z" fill="#CC6228" stroke="#CC6228" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.3928 20.6957L14.017 19.4906L15.1083 21.7842L15.7968 17.9875L8.39185 17.6506L11.3928 20.6957Z" fill="#CC6228" stroke="#CC6228" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M8.39209 17.6506L11.497 23.7019L11.393 20.6957L8.39209 17.6506Z" fill="#E27525" stroke="#E27525" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M24.2412 20.6957L24.1243 23.7019L27.2292 17.6506L24.2412 20.6957Z" fill="#E27525" stroke="#E27525" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M15.7972 17.9875L15.1086 21.7842L15.979 26.2675L16.1739 20.3588L15.7972 17.9875Z" fill="#E27525" stroke="#E27525" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.8242 17.9875L19.4604 20.3459L19.6423 26.2675L20.5127 21.7842L19.8242 17.9875Z" fill="#E27525" stroke="#E27525" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.5127 21.7843L19.6423 26.2676L20.2659 26.7082L24.1243 23.702L24.2412 20.6958L20.5127 21.7843Z" fill="#F5841F" stroke="#F5841F" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M11.3928 20.6958L11.4968 23.702L15.3551 26.7082L15.9787 26.2676L15.1083 21.7843L11.3928 20.6958Z" fill="#F5841F" stroke="#F5841F" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.5907 30.8417L20.6296 29.6107L20.2919 29.3256H15.3293L15.0045 29.6107L15.0305 30.8417L10.8733 28.8721L12.3283 30.0642L15.2773 32.0986H20.3308L23.2928 30.0642L24.7348 28.8721L20.5907 30.8417Z" fill="#C0AC9D" stroke="#C0AC9D" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M20.2658 26.7081L19.6422 26.2676H15.9787L15.3552 26.7081L15.0044 29.6107L15.3292 29.3256H20.2918L20.6296 29.6107L20.2658 26.7081Z" fill="#161616" stroke="#161616" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M33.5168 11.3532L34.6211 5.98873L32.9582 1L20.2659 10.3944L25.1505 14.5149L32.0488 16.5234L33.5688 14.7482L32.9063 14.2687L33.9585 13.3099L33.1531 12.6879L34.2054 11.8845L33.5168 11.3532Z" fill="#763E1A" stroke="#763E1A" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 5.98873L2.11724 11.3532L1.40273 11.8845L2.468 12.6879L1.66255 13.3099L2.71483 14.2687L2.05228 14.7482L3.57225 16.5234L10.4706 14.5149L15.3552 10.3944L2.66287 1L1 5.98873Z" fill="#763E1A" stroke="#763E1A" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M32.0489 16.5233L25.1506 14.5149L27.2292 17.6507L24.1243 23.7019L28.2295 23.6501H34.3613L32.0489 16.5233Z" fill="#F5841F" stroke="#F5841F" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.4704 14.5149L3.57214 16.5233L1.27271 23.6501H7.39154L11.4967 23.7019L8.39186 17.6507L10.4704 14.5149Z" fill="#F5841F" stroke="#F5841F" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/><path d="M19.8241 17.9876L20.2658 10.3943L22.2664 4.99097H13.3545L15.3551 10.3943L15.7968 17.9876L15.9657 20.3718L15.9787 26.2676H19.6422L19.6552 20.3718L19.8241 17.9876Z" fill="#F5841F" stroke="#F5841F" stroke-width="0.25" stroke-linecap="round" stroke-linejoin="round"/></svg>
+				Metamask Wallet
+			</button>
+			<button class="btn-border">
+				<svg viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+					<path d="M20 40C31.0457 40 40 31.0457 40 20C40 8.9543 31.0457 0 20 0C8.9543 0 0 8.9543 0 20C0 31.0457 8.9543 40 20 40Z" fill="#1652F0"></path>
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M5.45508 20.0006C5.45508 28.0338 11.9673 34.546 20.0006 34.546C28.0338 34.546 34.546 28.0338 34.546 20.0006C34.546 11.9673 28.0338 5.45508 20.0006 5.45508C11.9673 5.45508 5.45508 11.9673 5.45508 20.0006ZM17.3137 15.3145C16.2091 15.3145 15.3137 16.2099 15.3137 17.3145V22.6882C15.3137 23.7928 16.2091 24.6882 17.3137 24.6882H22.6874C23.792 24.6882 24.6874 23.7928 24.6874 22.6882V17.3145C24.6874 16.2099 23.792 15.3145 22.6874 15.3145H17.3137Z" fill="white"></path>
+				</svg>
+				Coinbase Wallet
+			</button>
+
+			<button class="btn-border">
+				<svg viewBox="0 0 40 25" xmlns="http://www.w3.org/2000/svg">
+					<path d="m8.19180572 4.83416816c6.52149658-6.38508884 17.09493158-6.38508884 23.61642788 0l.7848727.76845565c.3260748.31925442.3260748.83686816 0 1.15612272l-2.6848927 2.62873374c-.1630375.15962734-.4273733.15962734-.5904108 0l-1.0800779-1.05748639c-4.5495589-4.45439756-11.9258514-4.45439756-16.4754105 0l-1.1566741 1.13248068c-.1630376.15962721-.4273735.15962721-.5904108 0l-2.68489263-2.62873375c-.32607483-.31925456-.32607483-.83686829 0-1.15612272zm29.16903948 5.43649934 2.3895596 2.3395862c.3260732.319253.3260751.8368636.0000041 1.1561187l-10.7746894 10.5494845c-.3260726.3192568-.8547443.3192604-1.1808214.0000083-.0000013-.0000013-.0000029-.0000029-.0000042-.0000043l-7.6472191-7.4872762c-.0815187-.0798136-.2136867-.0798136-.2952053 0-.0000006.0000005-.000001.000001-.0000015.0000014l-7.6470562 7.4872708c-.3260715.3192576-.8547434.319263-1.1808215.0000116-.0000019-.0000018-.0000039-.0000037-.0000059-.0000058l-10.7749893-10.5496247c-.32607469-.3192544-.32607469-.8368682 0-1.1561226l2.38956395-2.3395823c.3260747-.31925446.85474652-.31925446 1.18082136 0l7.64733029 7.4873809c.0815188.0798136.2136866.0798136.2952054 0 .0000012-.0000012.0000023-.0000023.0000035-.0000032l7.6469471-7.4873777c.3260673-.31926181.8547392-.31927378 1.1808214-.0000267.0000046.0000045.0000091.000009.0000135.0000135l7.6473203 7.4873909c.0815186.0798135.2136866.0798135.2952053 0l7.6471967-7.4872433c.3260748-.31925458.8547465-.31925458 1.1808213 0z" fill="#3b99fc"></path>
+				</svg>
+				WalletConnect
+			</button>
+
+			<button class="btn-border">
+				<svg viewBox="0 0 114 166" xmlns="http://www.w3.org/2000/svg">
+					<g stroke="none" stroke-width="1" fill="none">
+						<path d="M17,51.453125 L17,40 C17,17.90861 34.90861,-1.0658141e-14 57,-1.0658141e-14 C79.09139,-1.0658141e-14 97,17.90861 97,40 L97,51.453125 L113.736328,51.453125 L113.736328,139.193359 L57.5,166 L0,139.193359 L0,51.453125 L17,51.453125 Z M37,51.453125 L77,51.453125 L77,40 L76.9678398,40 C76.3750564,29.406335 67.6617997,21 57,21 C46.3382003,21 37.6249436,29.406335 37.0321602,40 L37,40 L37,51.453125 Z M23,72 L23,125 L56.8681641,140.966797 L91,125 L91,72 L23,72 Z" fill="currentColor"></path>
+					</g>
+				</svg>
+				Trezor
+			</button>
+		</div>
+	</div>
+
+
+	<!-- scrool to top button -->
+	<button id="goTop" title="Scrool to top">
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 450"><path d="M168.5 164.2l148 146.8c4.7 4.7 4.7 12.3 0 17l-19.8 19.8c-4.7 4.7-12.3 4.7-17 0L160 229.3 40.3 347.8c-4.7 4.7-12.3 4.7-17 0L3.5 328c-4.7-4.7-4.7-12.3 0-17l148-146.8c4.7-4.7 12.3-4.7 17 0z"></path></svg>
+	</button>
+
+
+	<!-- js -->
+	<script src="./js/aos.js"></script>
+	<script src="./js/main.js" defer></script>
+</body>
+</html>
