@@ -164,11 +164,16 @@ iframe {
   gap: 1.2rem;
 }
 .buttonsHold{
+  margin-top:2vw !important;
+  padding: 2vw 0;
+  box-sizing: border-box;
   text-align: left;
   display: block;
+  margin-bottom: 0 !important;
 }
 @media screen and (max-width: 600px) {
   .buttonsHold{
+    margin-top:15vw !important;
     text-align: center;
   }
 }
@@ -260,6 +265,12 @@ iframe {
   width: 100%;
   aspect-ratio: 1;
   transition: 2s ease;
+  margin-bottom: 0;
+}
+@media (max-width: 55em) {
+  .space-vortex {
+    margin-bottom: 0 !important;
+  }
 }
 .space-vortex:hover {
   transform: scale(1.2);
@@ -314,6 +325,9 @@ iframe {
   .order-md-2 {
     order: 2;
   }
+}
+.calltoactionHold{
+  margin:0 !important;
 }
 /*--------------------------------------------------------*/
 /*	3. FONTS */
@@ -752,7 +766,7 @@ section.er404 {
   -webkit-background-clip: unset;
 }
 #slider div {
-  margin-top: 2rem;
+  
 }
 @media (max-width: 55em) {
   #slider div {
@@ -770,8 +784,8 @@ section.er404 {
     margin-bottom: 1.2rem;
   }
   #slider .container img {
-    max-width: 80%;
-    margin-bottom: -5.5rem;
+    max-width: 70%;
+    margin-bottom: 0rem;
   }
   #slider .container div a.btn {
     padding-inline: 1.5rem;
