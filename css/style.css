@@ -755,6 +755,9 @@ section.er404 {
   margin-top: 2rem;
 }
 @media (max-width: 55em) {
+  #slider div {
+    margin: 4rem 0 2rem;
+  }
   #slider {
     min-height: 85vh;
     line-height: 1;
@@ -1004,7 +1007,7 @@ section.er404 {
   }
   .projectName{
     position: relative;
-    width:60%;
+    width:70%;
     height:auto;
     box-sizing:border-box;
     text-align:center;
