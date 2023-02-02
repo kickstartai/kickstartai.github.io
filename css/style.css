@@ -1210,6 +1210,12 @@ section.er404 {
 /*==================================
     TIMELINE
 ===================================*/
+#roadmap{
+  background-image: url("../imgs/playful.webp"); /* fallback */
+  background-image: url("../imgs/playful.webp"), radial-gradient(#18142d, #040115 80%); 
+  background-size: contain;
+  background-position: center;
+}
 .Container_container__WAGEk {
   width: 100%;
   max-width: 1440px;
